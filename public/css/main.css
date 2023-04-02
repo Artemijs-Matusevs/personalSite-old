@@ -1,0 +1,594 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/* Everything */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    caret-color: transparent;
+}
+/*all pages*/
+.content{
+    padding-right: 100px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/* Blender portfolio page*/
+.blender{
+    background-image: url(../img/2.jpg);
+    background-attachment: fixed;
+}
+.unity{
+    background-image: url(../img/3.jpg);
+    background-attachment: fixed;
+}
+.other{
+    background-image: url(../img/4.jpg);
+    background-attachment: fixed;
+}
+
+
+
+
+/* CV Page CSS */
+.cv{
+    background-image: url(../img/5.jpg);
+    background-attachment: fixed;
+}
+
+.CVBody{
+    width: 50%;
+    height: 1600px;
+    border: 2px rgb(255, 255, 255) solid;
+    position: relative;
+    z-index: 0;
+    margin: auto;
+    padding: 10px;
+    padding-bottom: 25px;
+    border-radius: 1.5%;
+    box-shadow: 5px 5px 10px 10px brown;
+    animation: neonCV 5s infinite;
+    color: white;
+}
+
+.CVBody h2{
+    margin-top: 15px;
+    padding-left: 10%;
+    font-size: 50px;
+    font-family: 'Spline Sans Mono', monospace;
+    font-weight: bold;
+}
+.CVBody h3{
+    padding-left: 10%;
+    font-size: 15px;
+    font-family: 'Spline Sans Mono', monospace;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+.CVBody h4{
+    font-size: 30px;
+    font-family: 'Spline Sans Mono', monospace;
+    padding-left: 10%;
+}
+
+
+/* Top section of Div */
+.aboutMe{
+    display: flex;
+    color: white;
+    width: 100%;
+}
+
+
+.myImage{
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    border: 2px white solid;
+}
+
+.aboutMe p{
+    padding: 10px;
+    font-style: italic;
+    font-size: 17px;
+    margin: auto;
+}
+
+
+.CVBodyMain{
+    display: flex;
+
+}
+
+/* Education */
+.education{
+    width: 100%;
+    height: 50%;
+    padding: 1%;
+    margin: 5%;
+}
+.education h4{
+    font-size: 20px;
+    font-family: 'Spline Sans Mono', monospace;
+    padding-left: 0%;
+}
+.education hr{
+    margin-bottom: 10px;
+}
+.education div{
+    display: flex;
+}
+.education div .year{
+    margin-left: auto;
+}
+.education p{
+    text-align: justify;
+    text-justify: auto;
+    margin-bottom: 20px;
+}
+.education h5{
+    font-size: 15px;
+}
+.education h6{
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+
+
+.skills{
+    width: 100%;
+    height: 50%;
+    padding: 1%;
+    margin: 5%;
+    border: 2px white solid;
+}
+.skills h4{
+    font-size: 20px;
+    font-family: 'Spline Sans Mono', monospace;
+    padding-left: 0%;
+}
+
+
+/* Index page*/
+.index{
+    animation: slide 60s infinite;
+}
+
+
+/*social icons and footer*/
+ion-icon{
+    font-size: 35px;
+    color: white;
+    transition: all .7s ease-in-out;
+
+}
+ion-icon:hover{
+    transform: rotate(360deg) scale(1.5) ;
+    color: brown;
+}
+footer{
+    animation: fadeInAnimation ease 3s;
+}
+
+footer{
+    background-color: rgba(55,50,57,0.6);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    z-index: 1;
+}
+
+
+
+
+/*Nav Bar */
+a{
+    color: rgb(255, 255, 255);
+    font-family: 'Spline Sans Mono', monospace;
+    font-weight: bold;
+    font-size: 25px;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    width: 60%
+}
+li{
+    list-style: none;
+    text-shadow: #4c696d 0 0, brown 0 0;
+    transition: text-shadow 200ms;
+}
+li:hover{
+    animation: neon 5s infinite;
+}
+
+
+
+
+
+/* home button animation */
+.cta {
+    align-items: center;
+    color: white;
+    font-family: 'Spline Sans Mono', monospace;
+    font-size: 25px;
+    background: none;
+    border: none;
+    padding: 25px 18px;
+    position: relative;
+}
+.cta:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(calc(100% + 6px));
+    width: 60px;
+    height: 60px;
+    background-color: brown;
+    background-size: 400% 400%;
+
+    border-radius: 70px;
+    transition: transform .25s .25s cubic-bezier(0, 0, .5, 2), width .25s cubic-bezier(0, 0, .5, 2);
+}
+.cta:hover::before{
+    width: 100%;
+    transform:translateY(-50%) translateX(-18px);
+    transition: transform .25s cubic-bezier(0, 0, .5, 2), width .25s .25s cubic-bezier(0, 0, .5, 2);
+}
+.cta i{
+    margin-left: 5px;
+    transition: transform .25s 4s cubic-bezier(0, 0, .5, 2);
+
+}
+.cta:hover i{
+    transform: translateX(3px);
+}
+
+/* Home button */
+.cv:before,.other:before, .unity:before,.blender:before {
+    animation: fadeInAnimation ease 1s;
+    content: "";
+    position: fixed;
+    left:0; right: 0;
+    top: 0; bottom: 0;
+    background: rgba(55,50,57,0.8);
+}
+
+.currentBtn{
+    animation: neon 5s infinite;
+}
+
+
+
+
+/*Slogan*/
+h1{
+    position:absolute;
+    top: 45%;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    animation: neon 5s infinite;
+}
+
+
+
+/* Animations */
+
+/* Neon animation */
+@keyframes neon {
+    0%, 39%, 59%, 61%, 100%{
+        text-shadow:
+        white 0 0 12px,
+        red 0 0 24px,
+        red 0 0 36px;
+    }
+    40%, 60%{
+        text-shadow: none;
+    }
+}
+/* Div borded neon animation */
+@keyframes neonCV {
+    0%,39%, 59%, 61%, 100%{
+        box-shadow: 5px 5px 50px brown;
+    }
+    40%, 60%{
+        box-shadow: none;
+    }
+}
+
+/* Slogan animation */
+#slogan1{
+    left: 50%;
+    opacity: 0;
+    animation: fadeInAnimation 2s ease forwards 2s, neon 5s 5s infinite ;
+}
+#slogan2{
+    left: 57.3%;
+    opacity: 0;
+    animation: fadeInAnimation 2s ease forwards 2.5s, neon 5s 5s infinite ;
+}
+#slogan3{
+    left: 64.5%;
+    opacity: 0;
+    animation: fadeInAnimation 2s ease forwards 3s, neon 5s 5s infinite;
+}
+
+
+
+/* Animating and changing position of logo*/
+#logo{
+    position:absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#logo path{
+    stroke: white;
+}
+
+#logo path:nth-child(2){
+    stroke-dasharray: 516.5px;
+    stroke-dashoffset: 516.5px;
+    animation: line1 10s infinite;
+}
+#logo path:nth-child(3){
+    stroke-dasharray: 814.6px;
+    stroke-dashoffset: 814.6px;
+    animation: line2 10s infinite 0.3s;
+}
+#logo path:nth-child(4){
+    stroke-dasharray: 481.7px;
+    stroke-dashoffset: 481.7px;
+    animation: line3 10s infinite 0.6s;
+}
+#logo path:nth-child(5){
+    stroke-dasharray: 467.4px;
+    stroke-dashoffset: 467.4px;
+    animation: line4 10s infinite 0.9s;
+}
+#logo path:nth-child(6){
+    stroke-dasharray: 537px;
+    stroke-dashoffset: 537px;
+    animation: line5 10s infinite 1.2s;
+}
+#logo path:nth-child(7){
+    stroke-dasharray: 513.1px;
+    stroke-dashoffset: 513.1px;
+    animation: line6 10s infinite 1.5s;
+}
+#logo path:nth-child(8){
+    stroke-dasharray: 322.04px;
+    stroke-dashoffset: 322.04px;
+    animation: line7 10s infinite 1.8s;
+}
+#logo path:nth-child(9){
+    stroke-dasharray: 462.9px;
+    stroke-dashoffset: 462.9px;
+    animation: line8 10s infinite 2.1s;
+}
+
+
+/* Main logo animations */
+@keyframes line1{
+    0%{
+        stroke-dashoffset: 516.5px;
+    }
+    20%{
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dashoffset: 0;
+    }
+    80%{
+        stroke-dashoffset: 0;
+    }
+    0%{
+        stroke-dashoffset: -516.5px;
+    } 
+}
+@keyframes line2{
+    0%{
+        stroke-dashoffset: 814.6px;
+    }
+    20%{
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dashoffset: 0;
+    }
+    80%{
+        stroke-dashoffset: 0;
+    }
+    0%{
+        stroke-dashoffset: -814.6px;
+    }
+}
+@keyframes line3{
+    0%{
+        stroke-dashoffset: 481.7px;
+    }
+    20%{
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dashoffset: 0;
+    }
+    80%{
+        stroke-dashoffset: 0;
+    }
+    0%{
+        stroke-dashoffset: -481.7px;
+    }
+}
+@keyframes line4{
+    0%{
+        stroke-dashoffset: 467.4px;
+    }
+    20%{
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dashoffset: 0;
+    }
+    80%{
+        stroke-dashoffset: 0;
+    }
+    0%{
+        stroke-dashoffset: -467.4px;
+    }
+}
+@keyframes line5{
+    0%{
+        stroke-dashoffset: 537px;
+    }
+    20%{
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dashoffset: 0;
+    }
+    80%{
+        stroke-dashoffset: 0;
+    }
+    0%{
+        stroke-dashoffset: -537px;
+    }
+}
+@keyframes line6{
+    0%{
+        stroke-dashoffset: 513.1px;
+    }
+    20%{
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dashoffset: 0;
+    }
+    80%{
+        stroke-dashoffset: 0;
+    }
+    0%{
+        stroke-dashoffset: -513.1px;
+    }
+}
+@keyframes line7{
+    0%{
+        stroke-dashoffset: 322.04px;
+    }
+    20%{
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dashoffset: 0;
+    }
+    80%{
+        stroke-dashoffset: 0;
+    }
+    0%{
+        stroke-dashoffset: -322.04px;
+    }
+}
+@keyframes line8{
+    0%{
+        stroke-dashoffset: 462.9px;
+    }
+    20%{
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dashoffset: 0;
+    }
+    80%{
+        stroke-dashoffset: 0;
+    }
+    0%{
+        stroke-dashoffset: -462.9px;
+    }
+}
+
+
+
+
+/*Banner*/
+header{
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+}
+.banner{
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* Background slide show animation */
+
+@keyframes slide{
+    0%{
+        background-image: url(../img/5.jpg);
+    }
+    10%{
+        background-image: url(../img/5.jpg);
+    }
+    20%{
+        background-image: url(../img/1.jpg);
+    }
+    30%{
+        background-image: url(../img/1.jpg);
+    }
+    40%{
+        background-image: url(../img/2.jpg);
+    }
+    50%{
+        background-image: url(../img/2.jpg);
+    }
+    60%{
+        background-image: url(../img/3.jpg);
+    }
+    70%{
+        background-image: url(../img/3.jpg);
+    }
+    80%{
+        background-image: url(../img/4.jpg);
+    }
+    90%{
+        background-image: url(../img/4.jpg);
+    }
+    100%{
+        background-image: url(../img/5.jpg);
+    }
+}
+
+/*fade animation*/
+@keyframes fadeInAnimation{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+

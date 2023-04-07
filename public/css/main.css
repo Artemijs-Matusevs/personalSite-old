@@ -278,20 +278,11 @@ li:hover{
     animation: neon 5s infinite;
 }
 
-
-
-
-/*Slogan*/
-h1{
-    position:absolute;
-    top: 45%;
-    color: white;
-    font-family: 'Dancing Script', cursive;
-    font-size: 40px;
-    font-style: italic;
-    font-weight: bold;
-    animation: neon 5s infinite;
+.phoneMenuButton{
+    visibility: hidden;
 }
+
+
 
 
 
@@ -319,26 +310,46 @@ h1{
     }
 }
 
+
+/*Slogan*/
+h1{
+    display: inline;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#slogan{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+}
+
+
 /* Slogan animation */
 #slogan1{
-    left: 50%;
-    opacity: 0;
     animation: fadeInAnimation 2s ease forwards 2s, neon 5s 5s infinite ;
+    opacity: 0;
 }
 #slogan2{
-    left: 57.3%;
-    opacity: 0;
     animation: fadeInAnimation 2s ease forwards 2.5s, neon 5s 5s infinite ;
+    opacity: 0;
 }
 #slogan3{
-    left: 64.5%;
-    opacity: 0;
     animation: fadeInAnimation 2s ease forwards 3s, neon 5s 5s infinite;
+    opacity: 0;
 }
 
 
 
 /* Animating and changing position of logo*/
+#phoneLogo{
+    display: none;
+}
+
 #logo{
     position:absolute;
     top: 35%;
@@ -590,5 +601,118 @@ header{
     100%{
         opacity: 1;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------- Media Queries ------------------------------------- */
+@media all and (max-width: 600px)
+{
+
+    /* ------------------- PHONE NAV BAR ------------------*/
+    #topNav{
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgba(55,50,57,0.6);
+        width: 35%;
+        height: 90vh;
+        z-index: 2;
+        display: none;
+    }
+
+    #topNav ul{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #topNav li{
+        margin: 25px;
+        width: 50px;
+        animation: neon 3s infinite;
+    }
+
+
+
+
+
+
+    /* Animating and changing position of logo*/
+    #logo{
+        display: none;
+    }
+
+    #phoneLogo{
+        display: block;
+        position:absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 0;
+    }
+    #phoneLogo path{
+        stroke: white;
+    }
+    #phoneLogo path:nth-child(2){
+        stroke-dasharray: 516.5px;
+        stroke-dashoffset: 516.5px;
+        animation: line1 10s infinite;
+    }
+    #phoneLogo path:nth-child(3){
+        stroke-dasharray: 814.6px;
+        stroke-dashoffset: 814.6px;
+        animation: line2 10s infinite 0.3s;
+    }
+
+    /*Slogan*/
+    h1{
+        display: block;
+        color: white;
+        font-family: 'Dancing Script', cursive;
+        font-size: 35px;
+        font-style: italic;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    #slogan{
+        position: absolute;
+        left: 50%;
+        top: 45%;
+    }
+
+    #slogan1{
+        position: relative;
+        right: 100%;
+    }
+
+    #slogan2{
+        position: relative;
+        right: 50%;
+    }
+
+    #slogan3{
+        position: relative;
+        right: 0%;
+    }
+
+
+    /* Phone MENU BUTTON */
+    .phoneMenuButton{
+        position: absolute;
+        visibility: visible;
+        left: 25px;
+        top: 25px;
+    }
+
+
 }
 

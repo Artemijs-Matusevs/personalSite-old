@@ -9,6 +9,10 @@
     box-sizing: border-box;
     caret-color: transparent;
 }
+body{
+    overflow: hidden;
+}
+
 /*all pages*/
 .content{
     padding-right: 100px;
@@ -170,7 +174,7 @@ ion-icon{
     transition: all .7s ease-in-out;
 
 }
-ion-icon:hover{
+.socials ion-icon:hover{
     transform: rotate(360deg) scale(1.5) ;
     color: brown;
 }
@@ -183,7 +187,7 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 10%;
+    height: 10vh;
     width: 100%;
     z-index: 1;
 }
@@ -623,9 +627,9 @@ header{
         flex-direction: column;
         align-items: flex-start;
         background-color: rgba(55,50,57,0.6);
-        width: 35%;
+        width: 40%;
         height: 90vh;
-        z-index: 2;
+        z-index: 0;
         display: none;
     }
 
@@ -638,6 +642,10 @@ header{
         margin: 25px;
         width: 50px;
         animation: neon 3s infinite;
+    }
+
+    .cta {
+        top: 5%;
     }
 
 

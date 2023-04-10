@@ -82,16 +82,16 @@
             if (x === true)
             {
                 document.getElementById("topNav").style.display = "flex";
-                document.getElementById("phoneLogo").style.left = "60%";
-                document.getElementById("slogan").style.left = "60%";
+                document.getElementById("phoneLogo").style.transform = "translate(-20%, -50%)";
+                document.getElementById("slogan").style.transform = "translate(75%)";
                 document.getElementById("phoneMenuButton").style.transform = "rotate(90deg) scale(1.5)"
                 document.getElementById("phoneMenuButton").style.color = "red";
                 x = false;
             }
             else if (x === false){
                 document.getElementById("topNav").style.display = "none";
-                document.getElementById("phoneLogo").style.left = "50%";
-                document.getElementById("slogan").style.left = "50%";
+                document.getElementById("phoneLogo").style.transform = "translate(-50%, -50%)";
+                document.getElementById("slogan").style.transform = "translate(0)";
                 document.getElementById("phoneMenuButton").style.transform = "rotate(0deg) scale(1)"
                 document.getElementById("phoneMenuButton").style.color = "white";
                 x = true;

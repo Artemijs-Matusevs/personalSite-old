@@ -691,8 +691,10 @@ header{
     }
 
     #topNav ul{
+        position: absolute;
         flex-direction: column;
         justify-content: space-between;
+        top: 20%;
     }
 
     #topNav li{
@@ -702,7 +704,8 @@ header{
     }
 
     .cta {
-        top: 5%;
+        position: absolute;
+        top: 10%;
     }
 
 
@@ -715,6 +718,7 @@ header{
     #phoneLogo{
         display: block;
         position:absolute;
+        transition: all 1s ease-in-out;
         top: 35%;
         left: 50%;
         transform: translate(-50%,-50%);
@@ -749,6 +753,7 @@ header{
         position: absolute;
         left: 50%;
         top: 45%;
+        transition: all 1s 0.2s ease-in-out;
     }
 
     #slogan1{

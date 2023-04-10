@@ -561,6 +561,7 @@ header{
 
 /* Background slide show animation */
 
+/*
 @keyframes slide{
     0%{
         background-image: url(../img/5.jpg);
@@ -594,6 +595,43 @@ header{
     }
     100%{
         background-image: url(../img/5.jpg);
+    }
+}
+*/
+
+@keyframes slide{
+    0%{
+        background-image: url("../img/5.jpg")
+    }
+    23%{
+        background-image: url("../img/5.jpg"), url("../img/1.jpg")
+    }
+    25%{
+        background-image: url("../img/1.jpg")
+    }
+    48%{
+        background-image: url("../img/1.jpg"), url("../img/2.jpg")
+    }
+    50%{
+        background-image: url("../img/2.jpg")
+    }
+    73%{
+        background-image: url("../img/2.jpg"), url("../img/3.jpg")
+    }
+    75%{
+        background-image: url("../img/3.jpg")
+    }
+    88%{
+        background-image: url("../img/3.jpg"), url("../img/4.jpg")
+    }
+    90%{
+        background-image: url("../img/4.jpg")
+    }
+    98%{
+        background-image: url("../img/4.jpg"), url("../img/5.jpg")
+    }
+    100%{
+        background-image: url("../img/5.jpg")
     }
 }
 

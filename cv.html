@@ -13,7 +13,8 @@
     <header>   
         <div class="banner">
             <!--Animated logo-->
-            <nav>
+            <ion-icon class="phoneMenuButton" id="phoneMenuButton" onclick="phoneNav()" name="menu-outline"></ion-icon>
+            <nav id="topNav">
                 <button class="cta">
                     <a href="index.html">AM STUDIO</a><i class="ri-arrow-right-line"></i>
                 </button>
@@ -92,6 +93,28 @@
             <br>
         </div>
     </header>
+
+    <script> 
+        var x = true;
+    
+        function phoneNav() {
+        
+
+            if (x === true)
+            {
+                document.getElementById("topNav").style.display = "flex";
+                document.getElementById("phoneMenuButton").style.transform = "rotate(90deg) scale(1.5)"
+                document.getElementById("phoneMenuButton").style.color = "red";
+                x = false;
+            }
+            else if (x === false){
+                document.getElementById("topNav").style.display = "none";
+                document.getElementById("phoneMenuButton").style.transform = "rotate(0deg) scale(1)"
+                document.getElementById("phoneMenuButton").style.color = "white";
+                x = true;
+            }
+
+    }</script>
 
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

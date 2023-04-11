@@ -785,14 +785,18 @@ header{
     }
 
     .CVBody h3{
-        font-size: 12px;
+        font-size: 11px;
         margin-left: 0px;
         padding-left: 0;
     }
 
     .CVBody h2{
+        font-size: 25px;
+        margin-left: 0;
         padding-left: 0;
     }
+
+
 
     .skills1{
         width: 100%;
@@ -802,17 +806,22 @@ header{
         width: 100%;
     }
 
+    .skills1 ul{
+        width: 90%;
+        padding-left: 15px;
+    }
+
+    .skills2 ul{
+        width: 90%;
+        padding-left: 15px;
+    }
+
     .educationUnderline{
         margin: 0;
     }
 
     .CVBody ul{
         font-size: 11px;
-        margin-left: 0;
-    }
-
-    .CVBody h2{
-        font-size: 30px;
         margin-left: 0;
     }
 

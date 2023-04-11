@@ -93,7 +93,7 @@ body{
 
 .CVBody{
     width: 50%;
-    height: 1400px;
+    display: inline-block;
     border: 2px rgb(255, 255, 255) solid;
     position: relative;
     z-index: 0;
@@ -103,6 +103,7 @@ body{
     box-shadow: 5px 5px 10px 10px brown;
     animation: neonCV 5s infinite;
     color: white;
+    margin-bottom: 100px;
 }
 
 .CVBody h2{
@@ -756,25 +757,60 @@ header{
 
     /* CV */
     .CVBody{
-        width: 75%;
-        left: 12.5%;
+        width: 80%;
+        left: 10%;
         transition: all 1s 0.2s ease-in-out;
+        display: inline-block;
+    }
+
+    .date{
+        display: none;
+    }
+
+    .hidden{
+        display: none;
     }
 
     .CVBody h4{
         font-size: 20px;
+        margin-left: 0;
+        padding-left: 0;
     }
 
     .CVBody h3{
         font-size: 12px;
+        margin-left: 0px;
+        padding-left: 0;
+    }
+
+    .CVBody h2{
+        padding-left: 0;
+    }
+
+    .skills1{
+        width: 100%;
+    }
+
+    .skills2{
+        width: 100%;
+    }
+
+    .educationUnderline{
+        margin: 0;
     }
 
     .CVBody ul{
         font-size: 11px;
+        margin-left: 0;
     }
 
     .CVBody h2{
         font-size: 30px;
+        margin-left: 0;
+    }
+
+    .date{
+        display: none;
     }
 }
 

@@ -15,6 +15,7 @@
 /*all pages*/
 .content{
     padding-right: 100px;
+    z-index: 0;
 }
 html{
     scroll-behavior: smooth;
@@ -29,13 +30,119 @@ body{
     padding: 0;
 }
 
+header{
+    overflow-x: hidden;
+}
 
 
-/* Blender portfolio page*/
+
+/* ------------------- Blender portfolio page ---------------------*/
 .blender{
     background-image: url(../img/2.jpg);
     background-attachment: fixed;
 }
+
+.videosList{
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    top: 225px;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+.cover{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55,50,57,0.6);
+    position: absolute;
+    z-index: 2;
+    border-style: solid;
+    border-color: grey;
+}
+
+.cover:hover{
+    background-color: rgba(55,50,57,0);
+}
+
+.cover:hover .playButton{
+    font-size: 0;
+}
+
+
+.playButton{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200px;
+    color: grey;
+}
+
+video{
+    position: relative;
+    left: 0;
+    top: 2.5px;
+    width: 500px;
+    opacity: 1;
+    margin: auto;
+    z-index: 0;
+}
+
+.gallery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.galleryImage{
+    max-width: 100%;
+    height: 100px;
+    border-style: solid;
+    border-color: grey;
+    margin: 5px;
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.galleryImage:hover{
+    transform: scale(2);
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+    margin-right: 75px;
+    margin-left: 75px;
+}
+
+.gallery2{
+    margin-bottom: 500px;
+}
+
+.galleryImage2:hover{
+    margin-right: 140px;
+    margin-left: 140px;
+}
+
+.blenderHR{
+    width: 40%;
+    margin: auto;
+    margin-top: 75px;
+    border-style: none;
+    border-top: dotted;
+    border-width: 4px;
+    border-color: grey;
+}
+
+
+
+
+
+
+
+
+
 .unity{
     background-image: url(../img/3.jpg);
     background-attachment: fixed;
@@ -44,6 +151,10 @@ body{
     background-image: url(../img/4.jpg);
     background-attachment: fixed;
 }
+
+
+
+
 
 
 
@@ -57,7 +168,6 @@ body{
 .modules{
     width: 90%;
 }
-
 
 /* EDUCATION */
 .CVBody li{
@@ -77,9 +187,6 @@ body{
     margin-right: 5%;
 }
 
-
-
-
 .educationUnderline{
     margin-right: 4%;
     margin-top: 0%;
@@ -87,8 +194,6 @@ body{
     line-height: 0%;
     margin-bottom: 2.5%;
 }
-
-
 
 .CVBody ul{
     margin-left: 7.5%;
@@ -154,10 +259,17 @@ body{
 
 
 
+
+
+
 /* Index page*/
 .index{
     animation: slide 60s infinite;
 }
+
+
+
+
 
 
 /*social icons and footer*/
@@ -184,6 +296,8 @@ footer{
     width: 100%;
     z-index: 1;
 }
+
+
 
 
 
@@ -262,7 +376,8 @@ nav li:hover{
     transform: translateX(3px);
 }
 
-/* Home button */
+
+/* Transparent background  */
 .cv:before,.other:before, .unity:before,.blender:before {
     animation: fadeInAnimation ease 1s;
     content: "";
@@ -270,8 +385,11 @@ nav li:hover{
     left:0; right: 0;
     top: 0; bottom: 0;
     background: rgba(55,50,57,0.8);
+    z-index: -1;
 }
 
+
+/* Home button */
 .currentBtn{
     text-decoration: underline;
     text-decoration-color: brown;

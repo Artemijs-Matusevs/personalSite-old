@@ -28,6 +28,76 @@
         </div>
         <div id="content">
 
+            <div class="videosList">
+                <div class="coverUnity">
+                    <a href="https://mega.nz/file/WTABAZKI#t2-RRDeIyv7kc7lNL4H8UKrFocoJlc6Y7TKDrLPvt3U">
+                        <ion-icon class="downloadButton" name="code-download-outline"></ion-icon>
+                    </a>
+                    <h1>Pathfinding AI</h1>
+                </div>
+                <img src="public/img/enemyAI.png" alt="enemyAI" width="500px">
+
+            </div> 
+
+            <div class="gallery">
+                <ul>
+                    <li> Download and extract zip, run "EnemyAI.exe" </li>
+                    <li> The capsule will find the shortest path to the red cube, move the cube by moving the mouse. </li>
+                    <li> There are 3 states:
+                        <ul>
+                            <li> Patrol: A random coordinate within a set area from the capsule gets generated,
+                                using a raycast I was able to validate that the generated coordinate is on a walkable surface.
+                                Once this "walkPoint" gets reached, a new coordinate gets generated.
+                             </li>
+                            <li> Chase: When the red cube gets within a certain range from the capsule, the capsule will find
+                                the fastest path to the cube. </li>
+                            <li> Attack: Once the capsule gets within a certain range from the cube, it will stop chasing and stand in one place.
+                                The attack method is currently empty </li>
+                        </ul> </li>
+                    <li> The pathfinding function was achieved with the use of Unity's built in NavMesh mechanic.
+                         </li>
+                </ul>
+            </div>
+
+           <hr class="blenderHR">
+
+
+           <div class="videosList">
+            <div class="coverUnity">
+                <a href="https://mega.nz/file/7WIUmZLY#_jxd_CbmQMCP8EbTtzEOs3zA4cQEtVEHmQO-TbVGYIU">
+                    <ion-icon class="downloadButton" name="code-download-outline"></ion-icon>
+                </a>
+                <h1> Gun Prototype </h1>
+            </div>
+            <img src="public/img/gun.png" alt="enemyAI" width="500px">
+
+        </div> 
+
+        <div class="gallery">
+            <ul class="last">
+                <li> Download and extract zip, run "shootAnimationPrototype1911.exe" </li>
+                <li> To Move (W,A,S,D). Reload (R). View ammo (T). Reset level (F). </li>
+                <li> All animations have been imported from Blender and are set up within
+                    the Unity animator engine using the different states. 
+                    <ul>
+                        <li> Shoot </li>
+                        <li> Shoot Empty </li>
+                        <li> Reload </li>
+                        <li> Reload Empty </li>
+                        <li> Walking Key Down </li>
+                        <li> Walking Empty </li>
+                        <img class="animationImg" src="public/img/animationStates.PNG" width="250px">
+                    </ul> </li>
+                <li> Using raycasts, I can identify the objects which are hit, I was able to add force
+                    to the cone at the point of impact.
+                </li>
+                <li> There are two camera objects set up rendering the scene. One renders everything but the gun.
+                    The other only renders the gun. Using this method I was able to avoid the gun clipping through any walls.
+                </li>
+
+            </ul>
+        </div>
+
         </div>
     </header>
 
@@ -62,8 +132,8 @@
         <nav>
             <ul class="socials">
                 <li><a href="https://www.facebook.com/thomas.matusev.1/"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                <li><a href="https://github.com/timm261"><ion-icon name="logo-github"></ion-icon></a></li>
-                <li><a href="mailto: matu6ev@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
+                <li><a href="https://github.com/Artemijs-Matusevs"><ion-icon name="logo-github"></ion-icon></a></li>
+                <li><a href="mailto:Artemijs.Matusevs@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
                 <li><a href="https://www.linkedin.com/in/artemijs-matusev-0ba2a2233"><ion-icon name="logo-linkedin"></ion-icon></a></li>
             </ul>
         </nav>

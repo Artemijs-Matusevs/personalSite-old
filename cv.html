@@ -116,6 +116,23 @@
 
     <script> 
         var x = true;
+
+        var y = window.matchMedia("(min-width: 860px)")
+                myFunction(y)
+                y.addListener(myFunction)
+
+                function myFunction(y) {
+                    if (y.matches)
+                    {
+                        document.getElementById("topNav").style.display = "flex";
+                        x = false;
+                    }
+                    else
+                    {
+                        document.getElementById("topNav").style.display = "none";
+                        x = true;
+                    }
+                }
     
         function phoneNav() {
         

@@ -28,7 +28,7 @@
         </div>
         <div id="content">
 
-            <div class="videosList">
+            <div class="videosList" id="videosList2">
                 <div class="coverUnity">
                     <a href="https://mega.nz/file/WTABAZKI#t2-RRDeIyv7kc7lNL4H8UKrFocoJlc6Y7TKDrLPvt3U">
                         <ion-icon class="downloadButton" name="code-download-outline"></ion-icon>
@@ -39,7 +39,7 @@
 
             </div> 
 
-            <div class="gallery">
+            <div class="gallery" id="gallery2">
                 <ul>
                     <li> Download and extract zip, run "EnemyAI.exe" </li>
                     <li> The capsule will find the shortest path to the red cube, move the cube by moving the mouse. </li>
@@ -59,10 +59,10 @@
                 </ul>
             </div>
 
-           <hr class="blenderHR">
+           <hr class="blenderHR" id="blenderHR">
 
 
-           <div class="videosList">
+           <div class="videosList" id="videosList">
             <div class="coverUnity">
                 <a href="https://mega.nz/file/7WIUmZLY#_jxd_CbmQMCP8EbTtzEOs3zA4cQEtVEHmQO-TbVGYIU">
                     <ion-icon class="downloadButton" name="code-download-outline"></ion-icon>
@@ -73,7 +73,7 @@
 
         </div> 
 
-        <div class="gallery">
+        <div class="gallery" id="gallery">
             <ul class="last">
                 <li> Download and extract zip, run "shootAnimationPrototype1911.exe" </li>
                 <li> To Move (W,A,S,D). Reload (R). View ammo (T). Reset level (F). </li>
@@ -103,6 +103,23 @@
 
     <script> 
         var x = true;
+
+        var y = window.matchMedia("(min-width: 860px)")
+                myFunction(y)
+                y.addListener(myFunction)
+
+                function myFunction(y) {
+                    if (y.matches)
+                    {
+                        document.getElementById("topNav").style.display = "flex";
+                        x = false;
+                    }
+                    else
+                    {
+                        document.getElementById("topNav").style.display = "none";
+                        x = true;
+                    }
+                }
     
         function phoneNav() {
         
@@ -112,12 +129,22 @@
                 document.getElementById("topNav").style.display = "flex";
                 document.getElementById("phoneMenuButton").style.transform = "rotate(90deg) scale(1.5)"
                 document.getElementById("phoneMenuButton").style.color = "red";
+                document.getElementById("videosList").style.transform = "translate(30%, -50%)";
+                document.getElementById("gallery").style.transform = "translate(85%, -0%)";
+                document.getElementById("videosList2").style.transform = "translate(30%, -50%)";
+                document.getElementById("blenderHR").style.transform = "translate(150%, -50%)";
+                document.getElementById("gallery2").style.transform = "translate(85%, -0%)";
                 x = false;
             }
             else if (x === false){
                 document.getElementById("topNav").style.display = "none";
                 document.getElementById("phoneMenuButton").style.transform = "rotate(0deg) scale(1)"
                 document.getElementById("phoneMenuButton").style.color = "white";
+                document.getElementById("videosList").style.transform = "translate(-50%, -50%)";
+                document.getElementById("gallery").style.transform = "translate(-0%, -0%)";
+                document.getElementById("videosList2").style.transform = "translate(-50%, -50%)";
+                document.getElementById("gallery2").style.transform = "translate(-0%, -0%)";
+                document.getElementById("blenderHR").style.transform = "translate(-0%, -50%)";
                 x = true;
             }
 

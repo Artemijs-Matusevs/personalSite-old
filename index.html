@@ -67,7 +67,6 @@
     
 
 
-    <script src="js/page.js"> </script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -75,9 +74,25 @@
 
     <script> 
         var x = true;
+        
+        var y = window.matchMedia("(min-width: 860px)")
+                myFunction(y)
+                y.addListener(myFunction)
+
+                function myFunction(y) {
+                    if (y.matches)
+                    {
+                        document.getElementById("topNav").style.display = "flex";
+                        x = false;
+                    }
+                    else
+                    {
+                        document.getElementById("topNav").style.display = "none";
+                        x = true;
+                    }
+                }
     
         function phoneNav() {
-        
         
             if (x === true)
             {

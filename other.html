@@ -28,26 +28,71 @@
         </div>
         <div id="content">
 
+            <div class="videosList" id="videosList">
+                <div class="coverUnity">
+                    <a href="https://mega.nz/file/SL4HGCpa#NkBDN1Nv4RihAPBlwzqz9QuzRHZiuDo9ZuLWNzIBzgg">
+                        <ion-icon class="downloadButton" name="code-download-outline"></ion-icon>
+                    </a>
+                    <h1>SUDOKU</h1>
+                </div>
+                <img src="public/img/sudoku.png" alt="black" width="500px">
+
+            </div> 
+
+            <div class="gallery last" id="gallery">
+                <ul>
+                    <li>Command line application of the game "Sudoku" written in Java.</li>
+                    <li> To compile and run (requires java to be installed on the machine):
+                        <ul>
+                            <li> Open cmd and change directory to directory of the source code using cd command. </li>
+                            <li> Type "javac sudoku2.java" - This will compile the program.</li>
+                            <li> Run the program by typing "java sudoku2". </li>
+                        </ul> 
+                    <li> This is a piece of coursework which I submited during my 2nd year at Edinburgh Napier University. </li>
+                    <li> The above link contains a report describing my approach to making the Sudoku game. </li>
+                </ul>
+            </div>
+
         </div>
     </header>
 
     <script> 
         var x = true;
+
+        var y = window.matchMedia("(min-width: 860px)")
+                myFunction(y)
+                y.addListener(myFunction)
+
+                function myFunction(y) {
+                    if (y.matches)
+                    {
+                        document.getElementById("topNav").style.display = "flex";
+                        x = false;
+                    }
+                    else
+                    {
+                        document.getElementById("topNav").style.display = "none";
+                        x = true;
+                    }
+                }
     
         function phoneNav() {
         
-
             if (x === true)
             {
                 document.getElementById("topNav").style.display = "flex";
                 document.getElementById("phoneMenuButton").style.transform = "rotate(90deg) scale(1.5)"
                 document.getElementById("phoneMenuButton").style.color = "red";
+                document.getElementById("videosList").style.transform = "translate(30%, -50%)";
+                document.getElementById("gallery").style.transform = "translate(85%, -0%)";
                 x = false;
             }
             else if (x === false){
                 document.getElementById("topNav").style.display = "none";
                 document.getElementById("phoneMenuButton").style.transform = "rotate(0deg) scale(1)"
                 document.getElementById("phoneMenuButton").style.color = "white";
+                document.getElementById("videosList").style.transform = "translate(-50%, -50%)";
+                document.getElementById("gallery").style.transform = "translate(-0%, -0%)";
                 x = true;
             }
 

@@ -212,7 +212,6 @@ video{
 .animationImg:hover{
     transform: scale(4);
     transition: all 0.5s ease-in-out;
-    z-index: 1;
 }
 
 .animationImg{
@@ -842,7 +841,6 @@ header{
 
 
 /* --------------------------------- Media Queries ------------------------------------- */
-
 @media all and (max-width: 850px)
 {
 
@@ -1036,5 +1034,60 @@ header{
     .date{
         display: none;
     }
+
+
+
+    .videosList{
+        margin-top: 250px;
+        width: 75%;
+        transition: all 1s ease-in-out;
+    }
+
+
+    .gallery ul{
+        width: 75%;
+    }
+
+    .gallery{
+        width: 75%;
+        margin-left: 50px;
+        transition: all 1s 0.2s ease-in-out;
+    }
+
+    .blender .gallery{
+        margin: auto;
+        flex-direction: column;
+        width: 50%;
+        margin-top: 50px;
+    }
+
+
+    .wheel{
+        margin-bottom: 500px;
+    }
+
+    .blenderHR{
+        transition: all 1s 0.2s ease-in-out;
+    }
+
+    .blender .blenderHR{
+        margin-top: 250px;
+    }
+
+    .galleryImage{
+        width: 100%;
+        height: 100%;
+    }
+
+    #gun1911{
+        width: 100%
+    }
+
+    #mazdaRX8{
+        width: 100%
+    }
+
+
+    
 }
 

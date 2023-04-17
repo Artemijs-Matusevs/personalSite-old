@@ -28,7 +28,7 @@
         </div>
 
 
-            <div class="videosList">
+            <div class="videosList" id="videosList">
                 <div class="cover" onmousedown="gun1911.play()" onmouseleave="gun1911.pause(); gun1911.currentTime=0">
                     <ion-icon class="playButton" name="play-outline"></ion-icon>
                     <h1>Handgun: M1911</h1>
@@ -39,16 +39,16 @@
 
             </div> 
 
-            <div class="gallery">
+            <div class="gallery" id="gallery">
                 <img class="galleryImage" src="public/blenderModels/gunSideView.PNG">
                 <img class="galleryImage" src="public/blenderModels/gunSideView2.PNG">
                 <img class="galleryImage" src="public/blenderModels/hand.PNG">
                 <img class="galleryImage" src="public/blenderModels/hand1.PNG">
             </div>
 
-           <hr class="blenderHR">
+           <hr class="blenderHR" id="blenderHR">
 
-            <div class="videosList">
+            <div class="videosList" id="videosList2">
                 <div class="cover" onmousedown="mazdaRX8.play()" onmouseleave="mazdaRX8.pause(); mazdaRX8.currentTime=0">
                     <ion-icon class="playButton" name="play-outline"></ion-icon>
                     <h1>Car: Mazda RX7</h1>
@@ -59,37 +59,63 @@
 
             </div> 
 
-            <div class="gallery gallery2">
+            <div class="gallery gallery2" id="gallery2">
                 <img class="galleryImage galleryImage2" src="public/blenderModels/mazdaSideView.PNG">
                 <img class="galleryImage galleryImage2" src="public/blenderModels/mazdaSideView1.PNG">
                 <img class="galleryImage galleryImage2" src="public/blenderModels/mazda.PNG">
-                <img class="galleryImage galleryImage2" src="public/blenderModels/wheel.PNG">
+                <img class="galleryImage galleryImage2 wheel" src="public/blenderModels/wheel.PNG">
             </div>
 
 
 
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"> 
+            <script> 
+                var x = true;
 
-            var x = true;
-        
-            function phoneNav() {
+                var y = window.matchMedia("(min-width: 860px)")
+                myFunction(y)
+                y.addListener(myFunction)
+
+                function myFunction(y) {
+                    if (y.matches)
+                    {
+                        document.getElementById("topNav").style.display = "flex";
+                        x = false;
+                    }
+                    else
+                    {
+                        document.getElementById("topNav").style.display = "none";
+                        x = true;
+                    }
+                }
             
-    
-                if (x === true)
-                {
-                    document.getElementById("topNav").style.display = "flex";
-                    document.getElementById("phoneMenuButton").style.transform = "rotate(90deg) scale(1.5)"
-                    document.getElementById("phoneMenuButton").style.color = "red";
-                    x = false;
-                }
-                else if (x === false){
-                    document.getElementById("topNav").style.display = "none";
-                    document.getElementById("phoneMenuButton").style.transform = "rotate(0deg) scale(1)"
-                    document.getElementById("phoneMenuButton").style.color = "white";
-                    x = true;
-                }
-            }
-        </script>
+                function phoneNav() {
+                
+        
+                    if (x === true)
+                    {
+                        document.getElementById("topNav").style.display = "flex";
+                        document.getElementById("phoneMenuButton").style.transform = "rotate(90deg) scale(1.5)"
+                        document.getElementById("phoneMenuButton").style.color = "red";
+                        document.getElementById("videosList").style.transform = "translate(30%, -50%)";
+                        document.getElementById("gallery").style.transform = "translate(125%, -0%)";
+                        document.getElementById("blenderHR").style.transform = "translate(150%, -50%)";
+                        document.getElementById("videosList2").style.transform = "translate(30%, -50%)";
+                        document.getElementById("gallery2").style.transform = "translate(125%, -0%)";
+                        x = false;
+                    }
+                    else if (x === false){
+                        document.getElementById("topNav").style.display = "none";
+                        document.getElementById("phoneMenuButton").style.transform = "rotate(0deg) scale(1)"
+                        document.getElementById("phoneMenuButton").style.color = "white";
+                        document.getElementById("videosList").style.transform = "translate(-50%, -50%)";
+                        document.getElementById("gallery").style.transform = "translate(-0%, -0%)";
+                        document.getElementById("blenderHR").style.transform = "translate(-0%, -50%)";
+                        document.getElementById("videosList2").style.transform = "translate(-50%, -50%)";
+                        document.getElementById("gallery2").style.transform = "translate(-0%, -0%)";
+                        x = true;
+                    }
+        
+            }</script>
 
     </header>
 
@@ -103,7 +129,7 @@
             <ul class="socials">
                 <li><a href="https://www.facebook.com/thomas.matusev.1/"><ion-icon name="logo-facebook"></ion-icon></a></li>
                 <li><a href="https://github.com/Artemijs-Matusevs"><ion-icon name="logo-github"></ion-icon></a></li>
-                <li><a href="mailto:Artemijs.Matusevs@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
+                <li><a href="mailto: Artemijs.Matusevs@gmail.com"><ion-icon name="mail-outline"></ion-icon></a></li>
                 <li><a href="https://www.linkedin.com/in/artemijs-matusev-0ba2a2233"><ion-icon name="logo-linkedin"></ion-icon></a></li>
             </ul>
         </nav>
